@@ -2,6 +2,7 @@ Description:
 A JavaScript Trait which can be used to apply char restrictions on a Form Input (text) element.
 
 Dependencies:
+underscore.js: http://documentcloud.github.com/underscore/
 traits.js : http://traitsjs.org/
 
 Usage:
