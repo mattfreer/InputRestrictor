@@ -7,8 +7,7 @@ traits.js : http://traitsjs.org/
 
 Usage:
 var restrictor = Trait.create(this, new TInputRestrictor())
-restrictor.restrict($('#my-input'), /[0-9.]/);
-restrictor.restrict($('#decimal_txt'), /[0-9.%]/, /^-{0,1}\d*[.]?\d{0,2}$/);
+restrictor.restrict($('#decimal_txt'), /[0-9.\-]/, /^-{0,1}\d*[.]?\d{0,2}$/);
 
 Example of use in a Backbone View:
 http://jsfiddle.net/mattfreer/5SFpG/
