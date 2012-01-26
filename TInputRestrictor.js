@@ -1,8 +1,7 @@
 /*
  *Usage:
  *var restrictor = Trait.create(this, new TInputRestrictor())
- *restrictor.restrict($('#tax_rate_txt'), /[0-9.%]/);
- *restrictor.restrict($('#decimal_txt'), /[0-9.%]/, /^-{0,1}\d*[.]?\d{0,2}$/);
+ *restrictor.restrict($('#decimal_txt'), /[0-9.\-]/, /^-{0,1}\d*[.]?\d{0,2}$/);
  */
 function TInputRestrictor() {
   return Trait({
