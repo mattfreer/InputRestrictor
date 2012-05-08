@@ -45,9 +45,13 @@ function TInputRestrictor() {
     // Private
     // ----------------------------------------
     _isCharPermitted: function(charCode, matcher) {
-      var char = String.fromCharCode(charCode);
-      // match returns null if no match is found
-      var valid = !(_.isNull(char.match(matcher)));
+      var valid = true;
+      // In firefox Enter, Tab etc return a charCode of 0
+      if(charCode !== 0) {
+        var char = String.fromCharCode(charCode);
+        // match returns null if no match is found
+        valid = !(_.isNull(char.match(matcher)));
+      }
       return valid;
     },
 
